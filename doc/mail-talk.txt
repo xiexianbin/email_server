@@ -1,0 +1,11 @@
+smtp===
+s:220 localhost ESMTP Postfix - by ExtMail
+c:helo(ehlo)
+s:250 OK
+c:mail From:<wei@mail.com>
+s:250 OK
+c:rcpt to:<aaas@qq.com>
+s:250 ok
+c:data
+s:354 End data with .
+c:会把整个邮件中的信息进行传送

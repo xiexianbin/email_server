@@ -1,0 +1,87 @@
+502 5.5.2 Error: command not recognized
+
+
+ehlo sina.com.cn
+250-irxd5-187.sinamail.sina.com.cn
+250-8BITMIME
+250-SIZE 73400320
+250-AUTH PLAIN LOGIN
+250 AUTH=PLAIN LOGIN
+auth xie@sina.com
+504 #5.5.1 AUTH mechanism xie@sina.com is not available
+help
+530 Authentication required
+auth xianbinxie@sina.com
+504 #5.5.1 AUTH mechanism xianbinxie@sina.com is not available
+auth eGlhbmJpbnhpZUBzaW5hLmNvbQ==
+504 #5.5.1 AUTH mechanism eGlhbmJpbnhpZUBzaW5hLmNvbQ== is not available
+auth xianbinxie
+504 #5.5.1 AUTH mechanism xianbinxie is not available
+user xianbinxie
+500 #5.5.1 command not recognized
+auth login
+334 VXNlcm5hbWU6
+eGlhbmJpbnhpZUBzaW5hLmNvbQ==
+334 UGFzc3dvcmQ6
+MDAwMDAweDAw
+235 #2.0.0 OK Authenticated
+
+
+
+
+
+250-irxd5-201.sinamail.sina.com.cn
+250-8BITMIME
+250-SIZE 73400320
+250-AUTH PLAIN LOGIN
+250 AUTH=PLAIN LOGIN
+auth login
+334 VXNlcm5hbWU6
+eGlhbmJpbnhpZUBzaW5hLmNvbQ==
+334 UGFzc3dvcmQ6
+MDAwMDAweDAw
+235 #2.0.0 OK Authenticated
+data
+503 #5.5.1 MAIL first
+from: test@domain.com
+500 #5.5.1 command not recognized
+mail form:<xianbinxie@163.com>
+501 #5.5.2 syntax error 'mail form:<xiex\x08\x08\x08ianbinxie@163.com>'
+mail for
+501 #5.5.2 syntax error 'mail for\x08\x08'
+fm
+500 #5.5.1 command not recognized
+mail from:<xianbinxie@163.com>
+250 sender <xianbinxie@163.com> ok
+rcpt to:<xianbinxie@163.com>
+250 recipient <xianbinxie@163.com> ok
+data
+354 go ahead
+From:xianxianbin@163.com
+To:xianbinxie@163.com
+Date:mon
+Subject:haha
+this µÄ·½Ê½
+.
+250 ok:  Message 2035210468 accepted
+.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+eGlhbmJpbnhpZUBzaW5hLmNvbQ==
+
+
+MDAwMDAweDAw
+

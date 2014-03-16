@@ -1,0 +1,69 @@
+553 Requested action not taken: no smtp MX only,mx26,TMCowECZoESq6CVSjWFyAQ--.14819S2 1378216123
+
+
+220 163.com Anti-spam GT for Coremail System (163com[20121016])
+helo
+500 Error: bad syntax
+helo 57901.com
+250 OK
+mail from:<xiexianbin@163.com>
+553 Requested action not taken: no smtp MX only,mx9,O8CowECJfEhw6SVSlvhsBA--.1389S2 1378216343
+ehlo smtp.57901.com
+250-mail
+250-PIPELINING
+250-AUTH LOGIN PLAIN
+250-AUTH=LOGIN PLAIN
+250-coremail 1Uxr2xKj7kG0xkI17xGrU7I0s8FY2U3Uj8Cz28x1UUUUU7Ic2I0Y2Ur5SWdOUCa0xDrUUUUj
+250 8BITMIME
+mail from:<xi@57901.com>
+250 Mail OK
+rcpt to:<xianbinxie@163.com>
+250 Mail OK
+data
+354 End data with <CR><LF>.<CR><LF>
+502 Error: command not implemented
+
+
+
+220 163.com Anti-spam GT for Coremail System (163com[20121016])
+ehlo smtp.57901.com
+250-mail
+250-PIPELINING
+250-AUTH LOGIN PLAIN
+250-AUTH=LOGIN PLAIN
+250-coremail 1Uxr2xKj7kG0xkI17xGrU7I0s8FY2U3Uj8Cz28x1UUUUU7Ic2I0Y2UFtBsx4UCa0xDrUUUUj
+250 8BITMIME
+mail from:<xi@57901.com>
+250 Mail OK
+rcpt to:<xianbinxie@163.com>
+500 Error: bad syntax
+rcpt to:<xianbinxie@163.com>
+250 Mail OK
+data
+354 End data with <CR><LF>.<CR><LF>
+from:xie@163.com
+to:xianbinxie@163.com
+<CR><LR>.<CR><Lf>
+<CR><LF>.<CR><LF>
+.
+250 Mail OK queued as mx14,QMCowEDp_kjv6yVSYObpBA--.1796S2 1378217047
+
+
+
+
+220 163.com Anti-spam GT for Coremail System (163com[20121016])
+ehlo smtp.57901.com
+250-mail
+250-PIPELINING
+250-AUTH LOGIN PLAIN
+250-AUTH=LOGIN PLAIN
+250-coremail 1Uxr2xKj7kG0xkI17xGrU7I0s8FY2U3Uj8Cz28x1UUUUU7Ic2I0Y2UFF-ZpuUCa0xDrUUUUj
+250 8BITMIME
+mail from:<xi@57901.com>
+250 Mail OK
+rcpt to:<xianbinxie@163.com>
+250 Mail OK
+data
+354 End data with <CR><LF>.<CR><LF>
+250 Mail OK queued as mx15,QcCowEDZLkEG7SZStIZ6BQ--.784S2 1378282760
+

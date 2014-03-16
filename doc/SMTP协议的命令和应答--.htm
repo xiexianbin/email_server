@@ -1,0 +1,944 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0053)http://www.cnpaf.net/Class/SMTP/0532918532645436.html -->
+<!--Published Date:2007-1-17 10:22:41 Powered by www.Foosun.cn,Products:Foosun Content Manage System 3.2 SP1--><HTML><HEAD><TITLE>SMTP协议的命令和应答--</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<META content=SMTP协议的命令和应答-- name=description>
+<META content=SMTP协议的命令和应答-- name=keywords><LINK 
+href="SMTP协议的命令和应答--.files/protocol.css" type=text/css rel=stylesheet>
+<META http-equiv=Content-Language content=zh-CN>
+<META content="中国协议分析网 | 我们只谈协议" name=author>
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY onmouseup=document.selection.empty() oncontextmenu="return false" 
+onselectstart="return false" ondragstart="return false" 
+onbeforecopy="return false" oncopy=document.selection.empty() leftMargin=0 
+topMargin=0 onselect=document.selection.empty()>
+<TABLE cellSpacing=0 cellPadding=0 width=988 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=8 rowSpan=3><IMG height=132 
+      src="SMTP协议的命令和应答--.files/twdesign_0002.gif" width=8></TD>
+    <TD width=971 height=89>
+      <TABLE cellSpacing=0 cellPadding=0 width=971 border=0>
+        <TBODY>
+        <TR>
+          <TD align=middle width=260 bgColor=#ffffff height=85><A 
+            href="http://www.cnpaf.net/" target=_blank><IMG 
+            src="SMTP协议的命令和应答--.files/logo.gif" border=0></A></TD>
+          <TD align=middle width=600><IFRAME align=center marginWidth=0 
+            marginHeight=0 src="SMTP协议的命令和应答--.files/600X75.htm" frameBorder=0 
+            width=600 scrolling=no height=75></IFRAME></TD>
+          <TD vAlign=center align=middle width=114 bgColor=#ffffff height=68>
+            <TABLE height=75 cellSpacing=0 cellPadding=0 width="100%" 
+              border=0><TBODY>
+              <TR>
+                <TD width="21%"><IMG height=16 
+                  src="SMTP协议的命令和应答--.files/home.gif" width=16></TD>
+                <TD width="79%"><A 
+                  onclick="this.style.behavior='url(#default#homepage)';this.setHomePage(window.location.href);return false" 
+                  href="http://www.cnpaf.net/Class/SMTP/0532918532645436.html#" 
+                  target=_blank>设 为 首 页</A></TD></TR>
+              <TR>
+                <TD><IMG height=16 src="SMTP协议的命令和应答--.files/bookmark.gif" 
+                  width=16></TD>
+                <TD><A 
+                  href="javascript:window.external.addFavorite('http://www.cnpaf.net','中国协议分析网');" 
+                  target=_blank>加 入 收 藏</A></TD></TR>
+              <TR>
+                <TD><IMG height=16 src="SMTP协议的命令和应答--.files/email1.gif" 
+                  width=16></TD>
+                <TD><A href="mailto:wayky@126.com" target=_blank>联 系 我 
+              们</A></TD></TR></TBODY></TABLE><SPAN 
+          class=China-12-FFFFFF-20></SPAN></TD></TR></TBODY></TABLE></TD>
+    <TD width=8 rowSpan=3><IMG height=132 
+      src="SMTP协议的命令和应答--.files/twdesign_0003.gif" width=9></TD></TR>
+  <TR>
+    <TD bgColor=#5c5c5c height=5></TD></TR>
+  <TR>
+    <TD align=middle background=SMTP协议的命令和应答--.files/twdesign_0004.gif 
+height=38>
+      <TABLE cellSpacing=0 cellPadding=0 width="98%" border=0>
+        <TBODY>
+        <TR>
+          <TD width="15%">
+            <TABLE cellSpacing=0 cellPadding=0 width=950 border=0>
+              <TBODY>
+              <TR>
+                <TD align=middle width=69>
+                  <DIV align=center><A href="http://www.cnpaf.net/" 
+                  target=_blank>首　　页</A></DIV></TD>
+                <TD width=2>
+                  <DIV align=center><IMG height=38 
+                  src="SMTP协议的命令和应答--.files/d_0007.gif" width=2></DIV></TD>
+                <TD align=middle width=79>
+                  <DIV align=center><A href="http://www.cnpaf.net/class/news" 
+                  target=_blank>业界新闻</A></DIV></TD>
+                <TD width=2>
+                  <DIV align=center><IMG height=38 
+                  src="SMTP协议的命令和应答--.files/d_0007.gif" width=2></DIV></TD>
+                <TD align=middle width=79>
+                  <DIV align=center><A href="http://www.cnpaf.net/class/Analyze" 
+                  target=_blank>协议分析</A></DIV></TD>
+                <TD width=2>
+                  <DIV align=center><IMG height=38 
+                  src="SMTP协议的命令和应答--.files/d_0007.gif" width=2></DIV></TD>
+                <TD align=middle width=79>
+                  <DIV align=center><A 
+                  href="http://www.cnpaf.net/class/protocolAll" 
+                  target=_blank>协议大全</A></DIV></TD>
+                <TD width=2>
+                  <DIV align=center><IMG height=38 
+                  src="SMTP协议的命令和应答--.files/d_0007.gif" width=2></DIV></TD>
+                <TD align=middle width=71>
+                  <DIV align=center><A href="http://www.cnpaf.net/class/RfcAll" 
+                  target=_blank>RFC 文档</A></DIV></TD>
+                <TD width=2>
+                  <DIV align=center><IMG height=38 
+                  src="SMTP协议的命令和应答--.files/d_0007.gif" width=2></DIV></TD>
+                <TD align=middle width=79>
+                  <DIV align=center><A href="http://www.cnpaf.net/class/Manage" 
+                  target=_blank>网络管理</A></FONT></DIV></TD>
+                <TD width=2>
+                  <DIV align=center><IMG height=38 
+                  src="SMTP协议的命令和应答--.files/d_0007.gif" width=2></DIV></TD>
+                <TD align=middle width=79>
+                  <DIV align=center><A 
+                  href="http://www.cnpaf.net/class/security" 
+                  target=_blank>网络安全</A></DIV></TD>
+                <TD width=2>
+                  <DIV align=center><IMG height=38 
+                  src="SMTP协议的命令和应答--.files/d_0007.gif" width=2></DIV></TD>
+                <TD align=middle width=79>
+                  <DIV align=center><A 
+                  href="http://www.cnpaf.net/class/question" 
+                  target=_blank>问题解答</A></DIV></TD>
+                <TD width=2>
+                  <DIV align=center><IMG height=38 
+                  src="SMTP协议的命令和应答--.files/d_0007.gif" width=2></DIV></TD>
+                <TD align=middle width=79>
+                  <DIV align=center><A 
+                  href="http://www.cnpaf.net/class/download/" 
+                  target=_blank>软件下载</A></DIV></TD>
+                <TD width=2>
+                  <DIV align=center><IMG height=38 
+                  src="SMTP协议的命令和应答--.files/d_0007.gif" width=2></DIV></TD>
+                <TD align=middle width=79>
+                  <DIV align=center><A href="http://www.onlyblog.com/" 
+                  target=_blank>博&nbsp; 客</A></DIV></TD>
+                <TD width=2>
+                  <DIV align=center><IMG height=38 
+                  src="SMTP协议的命令和应答--.files/d_0007.gif" width=2></DIV></TD>
+                <TD align=middle width=79>
+                  <DIV align=center><A href="http://wiki.cnpaf.net/" 
+                  target=_blank>WIKI</A></DIV></TD>
+                <TD width=2>
+                  <DIV align=center><IMG height=38 
+                  src="SMTP协议的命令和应答--.files/d_0007.gif" width=2></DIV></TD>
+                <TD align=middle width=77>
+                  <DIV align=center><A href="http://www.cnpaf.net/forum" 
+                  target=_blank>交流论坛</A></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=988 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=0 width=988 align=center border=0>
+        <TBODY>
+        <TR>
+          <TD width=8><IMG height=8 
+            src="SMTP协议的命令和应答--.files/twdesign_0008.gif" width=8></TD>
+          <TD background=SMTP协议的命令和应答--.files/twdesign_0009.htm height=8></TD>
+          <TD width=9><IMG height=8 
+            src="SMTP协议的命令和应答--.files/twdesign_0010.gif" width=9></TD></TR>
+        <TR>
+          <TD background=SMTP协议的命令和应答--.files/twdesign_0011.gif rowSpan=2></TD>
+          <TD vAlign=baseline bgColor=#ffffff>
+            <TABLE class=linktable cellSpacing=0 cellPadding=0 width="100%" 
+            background=SMTP协议的命令和应答--.files/b.gif border=0>
+              <TBODY>
+              <TR>
+                <TD width=180 height=64 rowSpan=2><IMG height=64 
+                  src="SMTP协议的命令和应答--.files/home.gif" width=180 border=0></TD>
+                <TD colSpan=2 height=32><B><FONT color=#ff0000>推荐栏目</FONT></B> 
+                  | <A href="http://www.cnpaf.net/class/sniffer" 
+                  target=_blank>Sniffer</A> | <A 
+                  href="http://www.cnpaf.net/class/Ethereal" 
+                  target=_blank>Ethereal</A> | <A 
+                  href="http://www.cnpaf.net/class/ipv6" target=_blank>IPV6</A> 
+                  | <A href="http://www.cnpaf.net/class/iptv" 
+                  target=_blank>IPTV</A> | <A 
+                  href="http://www.cnpaf.net/class/mpls" target=_blank>MPLS</A> 
+                  | <A href="http://www.cnpaf.net/class/tcpandip" 
+                  target=_blank>TCP/IP</A> | <A 
+                  href="http://www.cnpaf.net/class/snmp" target=_blank>SNMP</A> 
+                  | <A href="http://www.cnpaf.net/class/wlan" 
+                  target=_blank>WLAN</A> | <A 
+                  href="http://www.cnpaf.net/class/rfc" 
+                  target=_blank>中文RFC文档</A> | <A 
+                  href="http://www.cnpaf.net/forum/forum-5-1.html" 
+                  target=_blank>编码交流</A>&nbsp;| <A 
+                  href="http://www.cnpaf.net/rss/main.asp" target=_blank><IMG 
+                  height=14 src="SMTP协议的命令和应答--.files/rss_xml.jpg" width=36 
+                  border=0></A></TD></TR>
+              <TR>
+                <TD width=110 height=32>　</TD>
+                <TD width=681>　</TD></TR></TBODY></TABLE></TD>
+          <TD background=SMTP协议的命令和应答--.files/twdesign_0012.gif 
+        rowSpan=2></TD></TR>
+        <TR>
+          <TD vAlign=baseline bgColor=#ffffff>
+            <TABLE cellSpacing=0 cellPadding=0 width=971 border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=top align=middle width=768 bgColor=#ffffff 
+height=500>
+                  <DIV align=center>
+                  <TABLE id=table59 cellSpacing=0 cellPadding=0 width=740 
+                  border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top>
+                        <DIV align=center>
+                        <TABLE id=table60 height=5 cellSpacing=0 cellPadding=0 
+                        width=730 
+                        background=SMTP协议的命令和应答--.files/0830_cor_top.gif 
+                        border=0>
+                          <TBODY>
+                          <TR>
+                            <TD width=5><IMG height=5 
+                              src="SMTP协议的命令和应答--.files/0830_cor_1.gif" 
+                            width=5></TD>
+                            <TD width=713></TD>
+                            <TD width=5><IMG height=5 
+                              src="SMTP协议的命令和应答--.files/0830_cor_2.gif" 
+                            width=5></TD></TR></TBODY></TABLE>
+                        <TABLE id=table61 
+                        style="BORDER-RIGHT: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid" 
+                        cellSpacing=0 cellPadding=0 width=730 bgColor=#ffffff 
+                        border=0>
+                          <TBODY>
+                          <TR>
+                            <TD align=middle>
+                              <DIV align=center>
+                              <TABLE id=table62 cellSpacing=0 cellPadding=0 
+                              width=725 border=0>
+                                <TBODY>
+                                <TR>
+                                <TD height=7></TD></TR>
+                                <TR>
+                                <TD vAlign=top align=middle height=33>
+                                <P align=left><IMG height=11 
+                                src="SMTP协议的命令和应答--.files/arrow3.gif" 
+                                width=29>您现在的位置： <SPAN class=px12><B><A 
+                                class=news 
+                                href="http://www.cnpaf.net/Index.html"><FONT 
+                                color=red>首页</FONT></A>&gt;&gt;<A class=news 
+                                href="http://www.cnpaf.net/Class/ProtocolAll/index.html">协议大全</A>&gt;&gt;<A 
+                                class=news 
+                                href="http://www.cnpaf.net/Class/SMTP/index.html">SMTP协议</A>&gt;&gt;正文</B></SPAN></P></TD></TR>
+                                <TR>
+                                <TD 
+                          height=7></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE>
+                        <TABLE id=table63 height=5 cellSpacing=0 cellPadding=0 
+                        width=730 
+                        background=SMTP协议的命令和应答--.files/0830_cor_bot.gif 
+                        border=0>
+                          <TBODY>
+                          <TR>
+                            <TD width=5><IMG height=5 
+                              src="SMTP协议的命令和应答--.files/0830_cor_3.gif" 
+                            width=5></TD>
+                            <TD width=713></TD>
+                            <TD width=5><IMG height=5 
+                              src="SMTP协议的命令和应答--.files/0830_cor_4.gif" 
+                            width=5></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE><BR>
+                  <TABLE id=table64 cellSpacing=0 cellPadding=0 width=740 
+                  border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top>
+                        <DIV align=center>
+                        <TABLE id=table65 height=5 cellSpacing=0 cellPadding=0 
+                        width=730 
+                        background=SMTP协议的命令和应答--.files/0830_cor_top.gif 
+                        border=0>
+                          <TBODY>
+                          <TR>
+                            <TD width=5><IMG height=5 
+                              src="SMTP协议的命令和应答--.files/0830_cor_1.gif" 
+                            width=5></TD>
+                            <TD width=713></TD>
+                            <TD width=5><IMG height=5 
+                              src="SMTP协议的命令和应答--.files/0830_cor_2.gif" 
+                            width=5></TD></TR></TBODY></TABLE>
+                        <TABLE id=table66 
+                        style="BORDER-RIGHT: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid" 
+                        cellSpacing=0 cellPadding=0 width=730 bgColor=#ffffff 
+                        border=0>
+                          <TBODY>
+                          <TR>
+                            <TD align=middle>
+                              <DIV align=center>
+                              <TABLE id=table67 cellSpacing=0 cellPadding=0 
+                              width=725 border=0>
+                                <TBODY>
+                                <TR>
+                                <TD height=7></TD></TR>
+                                <TR>
+                                <TD vAlign=top align=middle><B><FONT 
+                                size=3>SMTP协议的命令和应答</FONT></B></TD></TR>
+                                <TR>
+                                <TD 
+                          height=7></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE>
+                        <TABLE id=table68 height=5 cellSpacing=0 cellPadding=0 
+                        width=730 
+                        background=SMTP协议的命令和应答--.files/0830_cor_bot.gif 
+                        border=0>
+                          <TBODY>
+                          <TR>
+                            <TD width=5><IMG height=5 
+                              src="SMTP协议的命令和应答--.files/0830_cor_3.gif" 
+                            width=5></TD>
+                            <TD width=713></TD>
+                            <TD width=5><IMG height=5 
+                              src="SMTP协议的命令和应答--.files/0830_cor_4.gif" 
+                            width=5></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE><BR>
+                  <TABLE id=table13 cellSpacing=0 cellPadding=0 width=740 
+                  border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top></TD></TR>
+                    <TR>
+                      <TD vAlign=top>
+                        <DIV align=center>
+                        <TABLE id=table14 height=5 cellSpacing=0 cellPadding=0 
+                        width=730 
+                        background=SMTP协议的命令和应答--.files/0830_cor_top.gif 
+                        border=0>
+                          <TBODY>
+                          <TR>
+                            <TD width=5><IMG height=5 
+                              src="SMTP协议的命令和应答--.files/0830_cor_1.gif" 
+                            width=5></TD>
+                            <TD width=713></TD>
+                            <TD width=5><IMG height=5 
+                              src="SMTP协议的命令和应答--.files/0830_cor_2.gif" 
+                            width=5></TD></TR></TBODY></TABLE>
+                        <TABLE id=table15 
+                        style="BORDER-RIGHT: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid" 
+                        cellSpacing=0 cellPadding=0 width=730 bgColor=#ffffff 
+                        border=0>
+                          <TBODY>
+                          <TR>
+                            <TD align=middle>
+                              <DIV align=center>
+                              <TABLE id=table16 cellSpacing=0 cellPadding=0 
+                              width=725 border=0>
+                                <TBODY>
+                                <TR>
+                                <TD height=7></TD></TR>
+                                <TR>
+                                <TD vAlign=top align=middle>
+                                <P><IFRAME align=center marginWidth=0 
+                                marginHeight=0 
+                                src="SMTP协议的命令和应答--.files/544X100.htm" 
+                                frameBorder=0 width=700 scrolling=no 
+                                height=100></IFRAME></P></TD></TR>
+                                <TR>
+                                <TD 
+                          height=7></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE>
+                        <TABLE id=table17 height=5 cellSpacing=0 cellPadding=0 
+                        width=730 
+                        background=SMTP协议的命令和应答--.files/0830_cor_bot.gif 
+                        border=0>
+                          <TBODY>
+                          <TR>
+                            <TD width=5><IMG height=5 
+                              src="SMTP协议的命令和应答--.files/0830_cor_3.gif" 
+                            width=5></TD>
+                            <TD width=713></TD>
+                            <TD width=5><IMG height=5 
+                              src="SMTP协议的命令和应答--.files/0830_cor_4.gif" 
+                            width=5></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE><BR>
+                  <TABLE cellSpacing=0 cellPadding=0 width=740 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top></TD></TR>
+                    <TR>
+                      <TD vAlign=top>
+                        <DIV align=center>
+                        <TABLE height=5 cellSpacing=0 cellPadding=0 width=730 
+                        background=SMTP协议的命令和应答--.files/0830_cor_top.gif 
+                        border=0>
+                          <TBODY>
+                          <TR>
+                            <TD width=5><IMG height=5 
+                              src="SMTP协议的命令和应答--.files/0830_cor_1.gif" 
+                            width=5></TD>
+                            <TD width=713></TD>
+                            <TD width=5><IMG height=5 
+                              src="SMTP协议的命令和应答--.files/0830_cor_2.gif" 
+                            width=5></TD></TR></TBODY></TABLE>
+                        <TABLE 
+                        style="BORDER-RIGHT: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid" 
+                        cellSpacing=0 cellPadding=0 width=730 bgColor=#ffffff 
+                        border=0>
+                          <TBODY>
+                          <TR>
+                            <TD align=middle>
+                              <DIV align=center>
+                              <TABLE cellSpacing=0 cellPadding=0 width=715 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD height=7></TD></TR>
+                                <TR>
+                                <TD>
+                                <P align=left><IFRAME align=left marginWidth=0 
+                                marginHeight=0 
+                                src="SMTP协议的命令和应答--.files/300X250.htm" 
+                                frameBorder=0 width=300 scrolling=no 
+                                height=250></IFRAME>
+                                <P align=left>
+                                <P>　　从前面的通讯模型可以看出<A 
+                                href="http://www.cnpaf.net/class/smtp/" 
+                                target=_blank>SMTP</A><A 
+                                href="http://www.cnpaf.net/" 
+                                target=_blank>协议</A>在发送<A 
+                                href="http://www.cnpaf.net/class/smtp/" 
+                                target=_blank>SMTP</A>和接收<A 
+                                href="http://www.cnpaf.net/class/smtp/" 
+                                target=_blank>SMTP</A>之间的会话是靠发送<A 
+                                href="http://www.cnpaf.net/class/smtp/" 
+                                target=_blank>SMTP</A>的<A 
+                                href="http://www.cnpaf.net/class/smtp/" 
+                                target=_blank>SMTP</A>命令和接收<A 
+                                href="http://www.cnpaf.net/class/smtp/" 
+                                target=_blank>SMTP</A>反馈的应答来完成的。在通讯链路建立后，发送<A 
+                                href="http://www.cnpaf.net/class/smtp/" 
+                                target=_blank>SMTP</A>发送MAIL命令指令邮件发送者，若接收<A 
+                                href="http://www.cnpaf.net/class/smtp/" 
+                                target=_blank>SMTP</A>此时可以接收邮件则作出OK的应答，然后发送<A 
+                                href="http://www.cnpaf.net/class/smtp/" 
+                                target=_blank>SMTP</A>继续发出RCPT命令以确认邮件是否收到，如果接收到就作出OK的应答，否则就发出拒绝接收应答，但这并不会对整个邮件操作造成影响。双方如此反复多次，直至邮件处理完毕。<A 
+                                href="http://www.cnpaf.net/class/smtp/" 
+                                target=_blank>SMTP</A><A 
+                                href="http://www.cnpaf.net/" 
+                                target=_blank>协议</A>共包含10个<A 
+                                href="http://www.cnpaf.net/class/smtp/" 
+                                target=_blank>SMTP</A>命令，列表如下：<BR><BR><A 
+                                href="http://www.cnpaf.net/class/smtp/" 
+                                target=_blank>SMTP</A>命令命令说明<BR>HELLO＜domain＞＜CRLF＞识别发送方到接收<A 
+                                href="http://www.cnpaf.net/class/smtp/" 
+                                target=_blank>SMTP</A>的一个HELLO命令<BR>MAILFROM:＜reverse-path＞＜CRLF＞＜reverse-path＞为发送者地址。此命令告诉接收方一个新邮件发送的开始，并对所有的状态和缓冲区进行初始化。此命令开始一个邮件传输处理，最终完成将邮件数据传送到一个或多个邮箱中。<BR>RCPTTO:＜forward-path＞＜CRLF＞＜forward-path＞标识各个邮件接收者的地址<BR>DATA＜CRLF＞<BR>接收<A 
+                                href="http://www.cnpaf.net/class/smtp/" 
+                                target=_blank>SMTP</A>将把其后的行为看作邮件数据去处理，以＜CRLF＞.＜CRLF＞标识数据的结尾。<BR>REST＜CRLF＞退出/复位当前的邮件传输<BR>NOOP＜CRLF＞要求接收<A 
+                                href="http://www.cnpaf.net/class/smtp/" 
+                                target=_blank>SMTP</A>仅做OK应答。（用于测试）<BR>QUIT＜CRLF＞要求接收<A 
+                                href="http://www.cnpaf.net/class/smtp/" 
+                                target=_blank>SMTP</A>返回一个OK应答并关闭传输。<BR>VRFY＜string＞＜CRLF＞验证指定的邮箱是否存在，由于<A 
+                                href="http://www.cnpaf.net/class/security/" 
+                                target=_blank>安全</A>因素，服务器多禁止此命令。<BR>EXPN＜string＞＜CRLF＞验证给定的邮箱列表是否存在，扩充邮箱列表，也常禁止使用。<BR>HELP＜CRLF＞查询服务器支持什么命令<BR><BR>注：＜CRLF＞为回车、换行，ASCII码分别为13、10（十进制）。<BR><BR>　　<A 
+                                href="http://www.cnpaf.net/class/smtp/" 
+                                target=_blank>SMTP</A><A 
+                                href="http://www.cnpaf.net/" 
+                                target=_blank>协议</A>的每一个命令都会返回一个应答码，应答码的每一个数字都是有特定含义的，如第一位数字为2时表示命令成功；为5表失败；3表没有完成。一些较复杂的邮件程序利用该特点，首先检查应答码的首数字，并根据其值来决定下一步的动作。下面将<A 
+                                href="http://www.cnpaf.net/class/smtp/" 
+                                target=_blank>SMTP</A>的应答码列表如下：<BR><BR>应答码说明<BR>501参数格式错误<BR>502命令不可实现<BR>503错误的命令序列<BR>504命令参数不可实现<BR>211系统状态或系统帮助响应<BR>214帮助信息<BR>220＜domain＞服务就绪<BR>221＜domain＞服务关闭<BR>421＜domain＞服务未就绪，关闭传输信道<BR>250要求的邮件操作完成<BR>251用户非本地，将转发向＜forward-path＞<BR>450要求的邮件操作未完成，邮箱不可用<BR>550要求的邮件操作未完成，邮箱不可用<BR>451放弃要求的操作；处理过程中出错<BR>551用户非本地，请尝试＜forward-path＞<BR>452系统存储不足，要求的操作未执行<BR>552过量的存储分配，要求的操作未执行<BR>553邮箱名不可用，要求的操作未执行<BR>354开始邮件输入，以"."结束<BR>554操作失败<BR></P>
+                                <P></P>
+                                <P></P></TD></TR>
+                                <TR>
+                                <TD 
+                          height=7></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE>
+                        <TABLE height=5 cellSpacing=0 cellPadding=0 width=730 
+                        background=SMTP协议的命令和应答--.files/0830_cor_bot.gif 
+                        border=0>
+                          <TBODY>
+                          <TR>
+                            <TD width=5><IMG height=5 
+                              src="SMTP协议的命令和应答--.files/0830_cor_3.gif" 
+                            width=5></TD>
+                            <TD width=713></TD>
+                            <TD width=5><IMG height=5 
+                              src="SMTP协议的命令和应答--.files/0830_cor_4.gif" 
+                            width=5></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE><BR>
+                  <TABLE id=table18 cellSpacing=0 cellPadding=0 width=740 
+                  border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top></TD></TR>
+                    <TR>
+                      <TD vAlign=top>
+                        <DIV align=center>
+                        <TABLE id=table19 height=5 cellSpacing=0 cellPadding=0 
+                        width=730 
+                        background=SMTP协议的命令和应答--.files/0830_cor_top.gif 
+                        border=0>
+                          <TBODY>
+                          <TR>
+                            <TD width=5><IMG height=5 
+                              src="SMTP协议的命令和应答--.files/0830_cor_1.gif" 
+                            width=5></TD>
+                            <TD width=713></TD>
+                            <TD width=5><IMG height=5 
+                              src="SMTP协议的命令和应答--.files/0830_cor_2.gif" 
+                            width=5></TD></TR></TBODY></TABLE>
+                        <TABLE id=table20 
+                        style="BORDER-RIGHT: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid" 
+                        cellSpacing=0 cellPadding=0 width=730 bgColor=#ffffff 
+                        border=0>
+                          <TBODY>
+                          <TR>
+                            <TD align=middle>
+                              <DIV align=center>
+                              <TABLE id=table21 cellSpacing=0 cellPadding=0 
+                              width=715 border=0>
+                                <TBODY>
+                                <TR>
+                                <TD colSpan=2 height=7></TD></TR>
+                                <TR>
+                                <TD vAlign=top align=middle width=98>
+                                <P><B>上篇文章：</B></P></TD>
+                                <TD vAlign=top align=middle width=617>
+                                <P align=left><B><A title=SMTP协议简介 
+                                href="http://www.cnpaf.net/Class/SMTP/0532918532645032.html">SMTP协议简介</A></B></P></TD></TR>
+                                <TR>
+                                <TD vAlign=top align=middle width=715 
+                                colSpan=2>　</TD></TR>
+                                <TR>
+                                <TD vAlign=top align=middle 
+                                width=98><B>下篇文章：</B></TD>
+                                <TD vAlign=top align=middle width=617>
+                                <P align=left><B><A title=SMTP协议通讯模型 
+                                href="http://www.cnpaf.net/Class/SMTP/0532918532628751.html">SMTP协议通讯模型</A></B></P></TD></TR>
+                                <TR>
+                                <TD colSpan=2 
+                              height=7></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE>
+                        <TABLE id=table22 height=5 cellSpacing=0 cellPadding=0 
+                        width=730 
+                        background=SMTP协议的命令和应答--.files/0830_cor_bot.gif 
+                        border=0>
+                          <TBODY>
+                          <TR>
+                            <TD width=5><IMG height=5 
+                              src="SMTP协议的命令和应答--.files/0830_cor_3.gif" 
+                            width=5></TD>
+                            <TD width=713></TD>
+                            <TD width=5><IMG height=5 
+                              src="SMTP协议的命令和应答--.files/0830_cor_4.gif" 
+                            width=5></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE><BR>
+                  <TABLE id=table28 cellSpacing=0 cellPadding=0 width=740 
+                  border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top></TD></TR>
+                    <TR>
+                      <TD vAlign=top>
+                        <DIV align=center>
+                        <TABLE id=table29 height=5 cellSpacing=0 cellPadding=0 
+                        width=730 
+                        background=SMTP协议的命令和应答--.files/0830_cor_top.gif 
+                        border=0>
+                          <TBODY>
+                          <TR>
+                            <TD width=5><IMG height=5 
+                              src="SMTP协议的命令和应答--.files/0830_cor_1.gif" 
+                            width=5></TD>
+                            <TD width=713></TD>
+                            <TD width=5><IMG height=5 
+                              src="SMTP协议的命令和应答--.files/0830_cor_2.gif" 
+                            width=5></TD></TR></TBODY></TABLE>
+                        <TABLE id=table30 
+                        style="BORDER-RIGHT: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid" 
+                        cellSpacing=0 cellPadding=0 width=730 bgColor=#ffffff 
+                        border=0>
+                          <TBODY>
+                          <TR>
+                            <TD align=middle>
+                              <DIV align=center>
+                              <TABLE id=table31 cellSpacing=0 cellPadding=0 
+                              width=715 border=0>
+                                <TBODY>
+                                <TR>
+                                <TD height=7></TD></TR>
+                                <TR>
+                                <TD vAlign=top align=middle>
+                                <P align=left>　　版权说明：
+                                <P 
+                                align=left>　　部分特别声明不要转载，或者授权本站独家发布的文章，未经授权不要以任何形式转载，摘编，复制或建立镜像；大家可以自由转载本站的文章，但原作者和来自我站的链接必须保留。文章版权归本站和原作者共同所有；对于被本站转载文章的个人或网站，我们表示深深的谢意。 
+                                <BR>　　部分文章为本网转载，我们仅仅出于传递更多信息之目的，并不意味着赞同其观点或证实其内容的真实性。如其他媒体、网站或个人从本网转载使用，必须注明来源，并自负版权等法律责任。<BR>　　中国协议分析网依法保护知识产权，如果我们的文章有涉及或侵犯您的有关权益，请及时与我们联系（wayky#126.com，#请用@代替）， 
+                                邮件中注明文章所在位置及网络地址，我们会及时处理或删除，感谢您的合作。</P></TD></TR>
+                                <TR>
+                                <TD 
+                          height=7></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE>
+                        <TABLE id=table32 height=5 cellSpacing=0 cellPadding=0 
+                        width=730 
+                        background=SMTP协议的命令和应答--.files/0830_cor_bot.gif 
+                        border=0>
+                          <TBODY>
+                          <TR>
+                            <TD width=5><IMG height=5 
+                              src="SMTP协议的命令和应答--.files/0830_cor_3.gif" 
+                            width=5></TD>
+                            <TD width=713></TD>
+                            <TD width=5><IMG height=5 
+                              src="SMTP协议的命令和应答--.files/0830_cor_4.gif" 
+                            width=5></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE></DIV></TD>
+                <TD vAlign=top align=right width=209 bgColor=#ffffff>
+                  <TABLE cellSpacing=0 cellPadding=0 width=200 align=right 
+                  border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top width=200></TD></TR>
+                    <TR>
+                      <TD vAlign=top>
+                        <DIV align=center>
+                        <TABLE height=5 cellSpacing=0 cellPadding=0 width="100%" 
+                        background=SMTP协议的命令和应答--.files/0830_cor_top.gif 
+                        border=0>
+                          <TBODY>
+                          <TR>
+                            <TD width=5><IMG height=5 
+                              src="SMTP协议的命令和应答--.files/0830_cor_1.gif" 
+                            width=5></TD>
+                            <TD width=275></TD>
+                            <TD width=5><IMG height=5 
+                              src="SMTP协议的命令和应答--.files/0830_cor_2.gif" 
+                            width=5></TD></TR></TBODY></TABLE>
+                        <TABLE 
+                        style="BORDER-RIGHT: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid" 
+                        cellSpacing=0 cellPadding=0 width="100%" bgColor=#ffffff 
+                        border=0>
+                          <TBODY>
+                          <TR>
+                            <TD align=middle>
+                              <TABLE cellSpacing=0 cellPadding=0 width="98%" 
+                              align=center border=0>
+                                <TBODY>
+                                <TR>
+                                <TD height=7>
+                                <P align=center><IFRAME align=center 
+                                marginWidth=0 marginHeight=0 
+                                src="SMTP协议的命令和应答--.files/160X600.htm" 
+                                frameBorder=0 width=160 scrolling=no 
+                                height=600>
+</IFRAME></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+                        <TABLE height=5 cellSpacing=0 cellPadding=0 width="100%" 
+                        background=SMTP协议的命令和应答--.files/0830_cor_bot.gif 
+                        border=0>
+                          <TBODY>
+                          <TR>
+                            <TD width=5><IMG height=5 
+                              src="SMTP协议的命令和应答--.files/0830_cor_3.gif" 
+                            width=5></TD>
+                            <TD width=275></TD>
+                            <TD width=5><IMG height=5 
+                              src="SMTP协议的命令和应答--.files/0830_cor_4.gif" 
+                            width=5></TD></TR></TBODY></TABLE>
+                        <TABLE id=table1 cellSpacing=0 cellPadding=0 width=200 
+                        align=center border=0>
+                          <TBODY>
+                          <TR>
+                            <TD height=22>
+                              <DIV align=center><IMG height=20 
+                              src="SMTP协议的命令和应答--.files/leftmenuLine.gif" 
+                              width=160></DIV></TD></TR>
+                          <TR>
+                            <TD vAlign=top>
+                              <DIV align=center>
+                              <TABLE id=table2 height=5 cellSpacing=0 
+                              cellPadding=0 width="100%" 
+                              background=SMTP协议的命令和应答--.files/0830_cor_top.gif 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD width=5><IMG height=5 
+                                src="SMTP协议的命令和应答--.files/0830_cor_1.gif" 
+                                width=5></TD>
+                                <TD width=275></TD>
+                                <TD width=5><IMG height=5 
+                                src="SMTP协议的命令和应答--.files/0830_cor_2.gif" 
+                                width=5></TD></TR></TBODY></TABLE>
+                              <TABLE id=table3 
+                              style="BORDER-RIGHT: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid" 
+                              cellSpacing=0 cellPadding=0 width="100%" 
+                              bgColor=#ffffff border=0>
+                                <TBODY>
+                                <TR>
+                                <TD align=middle>
+                                <TABLE id=table4 cellSpacing=0 cellPadding=0 
+                                width="97%" border=0>
+                                <TBODY>
+                                <TR>
+                                <TD width=17 bgColor=#ffffff><IMG height=10 
+                                src="SMTP协议的命令和应答--.files/dl_icon01.gif" 
+                                width=9></TD>
+                                <TD bgColor=#39b6e7><FONT 
+                                color=#ffffff><B>热点文章列表</B></FONT></TD></TR></TBODY></TABLE>
+                                <TABLE id=table5 cellSpacing=0 cellPadding=0 
+                                width="98%" align=center border=0>
+                                <TBODY>
+                                <TR>
+                                <TD height=7></TD></TR>
+                                <TR>
+                                <TD vAlign=top align=middle width="50%">
+                                <P align=left>
+                                <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                                border=0>
+                                <TBODY>
+                                <TR>
+                                <TD height=20><IMG 
+                                src="SMTP协议的命令和应答--.files/navspacer.gif"><A 
+                                class=ti title=TCP/IP原理、基础以及在Linux上的实现 
+                                href="http://www.cnpaf.net/Class/ATM/0592822173745814432.htm" 
+                                target=_blank>TCP/IP原理、基础以及在Lin</A></TD></TR>
+                                <TR>
+                                <TD height=1>
+                                <TABLE cellSpacing=0 cellPadding=0 width="100%">
+                                <TBODY>
+                                <TR>
+                                <TD 
+                                background=SMTP协议的命令和应答--.files/dot_line01.gif 
+                                height=1></TD></TR></TBODY></TABLE></TD></TR>
+                                <TR>
+                                <TD height=20><IMG 
+                                src="SMTP协议的命令和应答--.files/navspacer.gif"><A 
+                                class=ti title="关于Sniffer Pro" 
+                                href="http://www.cnpaf.net/Class/SNIFFER/0512181337507089297.htm" 
+                                target=_blank>关于Sniffer&nbsp;Pro</A></TD></TR>
+                                <TR>
+                                <TD height=1>
+                                <TABLE cellSpacing=0 cellPadding=0 width="100%">
+                                <TBODY>
+                                <TR>
+                                <TD 
+                                background=SMTP协议的命令和应答--.files/dot_line01.gif 
+                                height=1></TD></TR></TBODY></TABLE></TD></TR>
+                                <TR>
+                                <TD height=20><IMG 
+                                src="SMTP协议的命令和应答--.files/navspacer.gif"><A 
+                                class=ti title=tcp三次握手及原理 
+                                href="http://www.cnpaf.net/Class/TCPANDIP/059212035541180708.htm" 
+                                target=_blank>tcp三次握手及原理</A></TD></TR>
+                                <TR>
+                                <TD height=1>
+                                <TABLE cellSpacing=0 cellPadding=0 width="100%">
+                                <TBODY>
+                                <TR>
+                                <TD 
+                                background=SMTP协议的命令和应答--.files/dot_line01.gif 
+                                height=1></TD></TR></TBODY></TABLE></TD></TR>
+                                <TR>
+                                <TD height=20><IMG 
+                                src="SMTP协议的命令和应答--.files/navspacer.gif"><A 
+                                class=ti title="中文RFC文档阅读 3001-3039" 
+                                href="http://www.cnpaf.net/Class/RFC/0532918533236552.html" 
+                                target=_blank>中文RFC文档阅读&nbsp;3001-3039</A></TD></TR>
+                                <TR>
+                                <TD height=1>
+                                <TABLE cellSpacing=0 cellPadding=0 width="100%">
+                                <TBODY>
+                                <TR>
+                                <TD 
+                                background=SMTP协议的命令和应答--.files/dot_line01.gif 
+                                height=1></TD></TR></TBODY></TABLE></TD></TR>
+                                <TR>
+                                <TD height=20><IMG 
+                                src="SMTP协议的命令和应答--.files/navspacer.gif"><A 
+                                class=ti title="中文RFC文档阅读 2501-3000" 
+                                href="http://www.cnpaf.net/Class/RFC/0532918533224139.html" 
+                                target=_blank>中文RFC文档阅读&nbsp;2501-3000</A></TD></TR>
+                                <TR>
+                                <TD height=1>
+                                <TABLE cellSpacing=0 cellPadding=0 width="100%">
+                                <TBODY>
+                                <TR>
+                                <TD 
+                                background=SMTP协议的命令和应答--.files/dot_line01.gif 
+                                height=1></TD></TR></TBODY></TABLE></TD></TR>
+                                <TR>
+                                <TD height=20><IMG 
+                                src="SMTP协议的命令和应答--.files/navspacer.gif"><A 
+                                class=ti title=Ethereal使用入门 
+                                href="http://www.cnpaf.net/Class/Ethereal/051214133656662677.htm" 
+                                target=_blank>Ethereal使用入门</A></TD></TR>
+                                <TR>
+                                <TD height=1>
+                                <TABLE cellSpacing=0 cellPadding=0 width="100%">
+                                <TBODY>
+                                <TR>
+                                <TD 
+                                background=SMTP协议的命令和应答--.files/dot_line01.gif 
+                                height=1></TD></TR></TBODY></TABLE></TD></TR>
+                                <TR>
+                                <TD height=20><IMG 
+                                src="SMTP协议的命令和应答--.files/navspacer.gif"><A 
+                                class=ti title="中文RFC文档阅读 2001-2500" 
+                                href="http://www.cnpaf.net/Class/RFC/0532918533294635.html" 
+                                target=_blank>中文RFC文档阅读&nbsp;2001-2500</A></TD></TR>
+                                <TR>
+                                <TD height=1>
+                                <TABLE cellSpacing=0 cellPadding=0 width="100%">
+                                <TBODY>
+                                <TR>
+                                <TD 
+                                background=SMTP协议的命令和应答--.files/dot_line01.gif 
+                                height=1></TD></TR></TBODY></TABLE></TD></TR>
+                                <TR>
+                                <TD height=20><IMG 
+                                src="SMTP协议的命令和应答--.files/navspacer.gif"><A 
+                                class=ti title=什么是WINS解析 
+                                href="http://www.cnpaf.net/Class/WINS/0532918533210727.html" 
+                                target=_blank>什么是WINS解析</A></TD></TR>
+                                <TR>
+                                <TD height=1>
+                                <TABLE cellSpacing=0 cellPadding=0 width="100%">
+                                <TBODY>
+                                <TR>
+                                <TD 
+                                background=SMTP协议的命令和应答--.files/dot_line01.gif 
+                                height=1></TD></TR></TBODY></TABLE></TD></TR>
+                                <TR>
+                                <TD height=20><IMG 
+                                src="SMTP协议的命令和应答--.files/navspacer.gif"><A 
+                                class=ti title="QQ 2005贺岁版登录口令加密算法及其源代码" 
+                                href="http://www.cnpaf.net/Class/OtherAnalysis/05112913192574594522.htm" 
+                                target=_blank>QQ&nbsp;2005贺岁版登录口令加密</A></TD></TR>
+                                <TR>
+                                <TD height=1>
+                                <TABLE cellSpacing=0 cellPadding=0 width="100%">
+                                <TBODY>
+                                <TR>
+                                <TD 
+                                background=SMTP协议的命令和应答--.files/dot_line01.gif 
+                                height=1></TD></TR></TBODY></TABLE></TD></TR>
+                                <TR>
+                                <TD height=20><IMG 
+                                src="SMTP协议的命令和应答--.files/navspacer.gif"><A 
+                                class=ti title=用Ethereal分析协议数据包 
+                                href="http://www.cnpaf.net/Class/Ethereal/0563016582850703348.htm" 
+                                target=_blank>用Ethereal分析协议数据包</A></TD></TR>
+                                <TR>
+                                <TD height=1>
+                                <TABLE cellSpacing=0 cellPadding=0 width="100%">
+                                <TBODY>
+                                <TR>
+                                <TD 
+                                background=SMTP协议的命令和应答--.files/dot_line01.gif 
+                                height=1></TD></TR></TBODY></TABLE></TD></TR>
+                                <TR>
+                                <TD height=20><IMG 
+                                src="SMTP协议的命令和应答--.files/navspacer.gif"><A 
+                                class=ti title=彻底明白IP地址——计算相关地址 
+                                href="http://www.cnpaf.net/Class/TCPANDIP/0592822262019763198.htm" 
+                                target=_blank>彻底明白IP地址——计算相关</A></TD></TR>
+                                <TR>
+                                <TD height=1>
+                                <TABLE cellSpacing=0 cellPadding=0 width="100%">
+                                <TBODY>
+                                <TR>
+                                <TD 
+                                background=SMTP协议的命令和应答--.files/dot_line01.gif 
+                                height=1></TD></TR></TBODY></TABLE></TD></TR>
+                                <TR>
+                                <TD height=20><IMG 
+                                src="SMTP协议的命令和应答--.files/navspacer.gif"><A 
+                                class=ti title="中文RFC文档阅读 1501-2000" 
+                                href="http://www.cnpaf.net/Class/RFC/0532918533258205.html" 
+                                target=_blank>中文RFC文档阅读&nbsp;1501-2000</A></TD></TR>
+                                <TR>
+                                <TD height=1>
+                                <TABLE cellSpacing=0 cellPadding=0 width="100%">
+                                <TBODY>
+                                <TR>
+                                <TD 
+                                background=SMTP协议的命令和应答--.files/dot_line01.gif 
+                                height=1></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+                              <TABLE id=table12 height=5 cellSpacing=0 
+                              cellPadding=0 width="100%" 
+                              background=SMTP协议的命令和应答--.files/0830_cor_bot.gif 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD width=5><IMG height=5 
+                                src="SMTP协议的命令和应答--.files/0830_cor_3.gif" 
+                                width=5></TD>
+                                <TD width=275></TD>
+                                <TD width=5><IMG height=5 
+                                src="SMTP协议的命令和应答--.files/0830_cor_4.gif" 
+                                width=5></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=989 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=8><IMG height=7 src="SMTP协议的命令和应答--.files/twdesign_0013.gif" 
+      width=8></TD>
+    <TD width=971 background=SMTP协议的命令和应答--.files/twdesign_0015.gif 
+    height=7></TD>
+    <TD width=10><IMG height=7 src="SMTP协议的命令和应答--.files/twdesign_0014.gif" 
+      width=9></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=988 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=8><IMG height=8 src="SMTP协议的命令和应答--.files/twdesign_0008(1).gif" 
+      width=8></TD>
+    <TD background=SMTP协议的命令和应答--.files/twdesign_0009.htm height=8></TD>
+    <TD width=8><IMG height=8 src="SMTP协议的命令和应答--.files/twdesign_0010(1).gif" 
+      width=9></TD></TR>
+  <TR>
+    <TD background=SMTP协议的命令和应答--.files/twdesign_0011.gif height=100></TD>
+    <TD vAlign=baseline bgColor=#ffffff>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD>
+            <DIV align=center>
+            <TABLE class=center_tdbgall 
+            style="BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; BORDER-LEFT-COLOR: #ffffff; BORDER-BOTTOM-WIDTH: 1px; BORDER-BOTTOM-COLOR: #ffffff; BORDER-TOP-COLOR: #ffffff; BORDER-RIGHT-WIDTH: 1px; BORDER-RIGHT-COLOR: #ffffff" 
+            cellSpacing=0 cellPadding=0 width=742 border=0>
+              <TBODY>
+              <TR>
+                <TD class=12 vAlign=bottom><A 
+                  href="http://www.cnpaf.net/hezuo.html" target=_blank>广告合作 
+                </A></TD>
+                <TD class=12 vAlign=bottom><A 
+                  href="http://www.cnpaf.net/about.html" target=_blank>关于我们 
+                </A></TD>
+                <TD class=12 vAlign=bottom><A 
+                  href="http://www.cnpaf.net/map.html" target=_blank>网站地图 
+</A></TD>
+                <TD class=12 vAlign=bottom><A href="mailto:wayky@126.com" 
+                  target=_blank>联系我们 </A></TD>
+                <TD class=12 vAlign=bottom><A 
+                  href="http://www.cnpaf.net/copyright.html" target=_blank>版权说明 
+                  </A></TD>
+                <TD class=12 vAlign=bottom><A 
+                  href="http://www.cnpaf.net/history.html" target=_blank>网站历史 
+                  </A></TD>
+                <TD class=12 vAlign=bottom><A 
+                  href="http://www.cnpaf.net/guest" target=_blank>站内留言 </A></TD>
+                <TD class=12 vAlign=bottom><A 
+                  href="http://www.cnpaf.net/link.html" target=_blank>友情链接 
+                </A></TD>
+                <TD class=12 vAlign=bottom><A 
+                  href="http://www.alexa.com/data/details/traffic_details?q=&amp;url=cnpaf.net" 
+                  target=_blank>世界排名 </A></TD>
+                <TD class=12 vAlign=bottom><A 
+                  href="javascript:window.external.addFavorite('http://www.cnpaf.net','中国协议分析网');" 
+                  target=_blank>加入收藏</A></TD>
+                <TD class=12 vAlign=bottom><A 
+                  onclick="this.style.behavior='url(#default#homepage)';this.setHomePage(window.location.href);return false" 
+                  href="http://www.cnpaf.net/Class/SMTP/0532918532645436.html#" 
+                  target=_blank>设为首页</A></TD></TR></TBODY></TABLE></DIV>
+            <DIV align=center>
+            <TABLE width="100%">
+              <TBODY>
+              <TR>
+                <TD width="100%">
+                  <P align=center>
+                  <SCRIPT src="SMTP协议的命令和应答--.files/copyright.js"></SCRIPT>
+                  </P></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE></TD>
+    <TD background=SMTP协议的命令和应答--.files/twdesign_0012.gif></TD></TR>
+  <TR>
+    <TD><IMG height=7 src="SMTP协议的命令和应答--.files/twdesign_0013(1).gif" 
+    width=8></TD>
+    <TD background=SMTP协议的命令和应答--.files/twdesign_0015.gif height=7></TD>
+    <TD><IMG height=7 src="SMTP协议的命令和应答--.files/twdesign_0014(1).gif" 
+    width=9></TD></TR></TBODY></TABLE></BODY></HTML>

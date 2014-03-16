@@ -1,0 +1,110 @@
+Microsoft Windows [版本 6.1.7601]
+版权所有 (c) 2009 Microsoft Corporation。保留所有权利。
+
+C:\Users\Administrator>nslookup
+默认服务器:  mirrors.aliyun.com
+Address:  110.75.186.247
+
+> set type=mx
+> sina.com.cn
+服务器:  mirrors.aliyun.com
+Address:  110.75.186.247
+
+非权威应答:
+sina.com.cn     MX preference = 5, mail exchanger = freemx.sinamail.sina.com.cn
+sina.com.cn     MX preference = 10, mail exchanger = freemx1.sinamail.sina.com.c
+n
+sina.com.cn     MX preference = 10, mail exchanger = freemx2.sinamail.sina.com.c
+n
+sina.com.cn     MX preference = 10, mail exchanger = freemx3.sinamail.sina.com.c
+n
+
+sina.com.cn     nameserver = ns4.sina.com.cn
+sina.com.cn     nameserver = ns2.sina.com.cn
+sina.com.cn     nameserver = ns3.sina.com.cn
+sina.com.cn     nameserver = ns1.sina.com.cn
+freemx1.sinamail.sina.com.cn    internet address = 202.108.7.19
+freemx2.sinamail.sina.com.cn    internet address = 218.30.115.106
+freemx3.sinamail.sina.com.cn    internet address = 60.28.2.248
+ns1.sina.com.cn internet address = 202.106.184.166
+ns2.sina.com.cn internet address = 61.172.201.254
+ns3.sina.com.cn internet address = 123.125.29.99
+ns4.sina.com.cn internet address = 121.14.1.22
+> qq.com
+服务器:  mirrors.aliyun.com
+Address:  110.75.186.247
+
+非权威应答:
+qq.com  MX preference = 20, mail exchanger = mx2.qq.com
+qq.com  MX preference = 30, mail exchanger = mx1.qq.com
+qq.com  MX preference = 10, mail exchanger = mx3.qq.com
+
+qq.com  nameserver = ns3.qq.com
+qq.com  nameserver = ns4.qq.com
+qq.com  nameserver = ns1.qq.com
+qq.com  nameserver = ns2.qq.com
+mx3.qq.com      internet address = 183.62.125.223
+mx3.qq.com      internet address = 113.108.18.210
+mx3.qq.com      internet address = 113.108.64.240
+mx3.qq.com      internet address = 113.108.77.23
+mx3.qq.com      internet address = 119.147.6.81
+mx3.qq.com      internet address = 119.147.192.101
+mx3.qq.com      internet address = 119.147.192.199
+mx3.qq.com      internet address = 183.62.125.199
+mx2.qq.com      internet address = 119.147.192.101
+mx2.qq.com      internet address = 119.147.192.199
+mx2.qq.com      internet address = 183.62.125.199
+mx2.qq.com      internet address = 183.62.125.223
+mx2.qq.com      internet address = 113.108.18.210
+mx2.qq.com      internet address = 113.108.64.240
+mx2.qq.com      internet address = 113.108.77.23
+mx2.qq.com      internet address = 119.147.6.81
+> 163.com
+服务器:  mirrors.aliyun.com
+Address:  110.75.186.247
+
+非权威应答:
+163.com MX preference = 10, mail exchanger = 163mx01.mxmail.netease.com
+163.com MX preference = 10, mail exchanger = 163mx02.mxmail.netease.com
+163.com MX preference = 10, mail exchanger = 163mx03.mxmail.netease.com
+163.com MX preference = 50, mail exchanger = 163mx00.mxmail.netease.com
+
+163.com nameserver = ns2.nease.net
+163.com nameserver = ns3.nease.net
+163.com nameserver = ns6.nease.net
+163.com nameserver = ns4.nease.net
+163.com nameserver = ns1.nease.net
+163.com nameserver = ns5.nease.net
+163mx01.mxmail.netease.com      internet address = 220.181.14.136
+163mx01.mxmail.netease.com      internet address = 220.181.14.137
+163mx01.mxmail.netease.com      internet address = 220.181.14.138
+163mx01.mxmail.netease.com      internet address = 220.181.14.139
+163mx01.mxmail.netease.com      internet address = 220.181.14.140
+163mx01.mxmail.netease.com      internet address = 220.181.14.141
+163mx01.mxmail.netease.com      internet address = 220.181.14.142
+163mx01.mxmail.netease.com      internet address = 220.181.14.143
+163mx01.mxmail.netease.com      internet address = 220.181.14.135
+>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

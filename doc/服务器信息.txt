@@ -1,0 +1,9 @@
+邮件服务器测试：
+
+1.注册邮箱
+	telnet 57901.com 8888
+	telnet 115.28.0.95 8888
+2.通过foxmail连接。
+
+telnet smtp.57901.com 25  SMTP服务器
+telnet pop.57901.com 110  POP3服务器
